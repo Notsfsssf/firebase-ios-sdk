@@ -148,6 +148,7 @@ typedef NS_ENUM(NSUInteger, FIRMessagingContextManagerMessageType) {
       [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:dateComponents repeats:NO];
 
   UNMutableNotificationContent *content = [self contentFromContextualMessage:message];
+    content.categoryIdentifier = @"myNotificationCategory";
   NSString *identifier = message[kFIRMessagingID];
   if (!identifier) {
     identifier = [NSUUID UUID].UUIDString;
