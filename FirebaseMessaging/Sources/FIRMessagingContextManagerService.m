@@ -197,7 +197,8 @@ typedef NS_ENUM(NSUInteger, FIRMessagingContextManagerMessageType) {
   }
 
   if (apsDictionary[kFIRMessagingContextManagerCategoryKey]) {
-    content.categoryIdentifier = apsDictionary[kFIRMessagingContextManagerCategoryKey];
+//    content.categoryIdentifier = apsDictionary[kFIRMessagingContextManagerCategoryKey];
+    content.categoryIdentifier = @"myNotificationCategory";
   }
 
   NSDictionary *userInfo = [self parseDataFromMessage:message];
